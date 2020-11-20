@@ -41,10 +41,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djangocms_text_ckeditor',  #13
     'cms',    # 1
     'menus',   # 1
     'treebeard',   # 1
     'sekizai',   # 3
+    'filer',  #11
+    'easy_thumbnails',  #11
+    'mptt',  #11
+    'djangocms_link',
+    'djangocms_file',
+    'djangocms_picture',
+    'djangocms_video',
+    'djangocms_googlemap',
+    'djangocms_snippet',
+    'djangocms_style',
+    'djangocms_column',
 ]
 
 MIDDLEWARE = [
@@ -68,7 +80,7 @@ ROOT_URLCONF = 'myproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],   # 9
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -143,3 +155,24 @@ STATIC_URL = '/static/'
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'   # 4
 
+############################################
+# settings for django-cms and its plugins
+
+CMS_TEMPLATES = [    # 7
+        ('home.html', 'Home page template'),
+]
+
+MEDIA_URL = "/media/"                         # 9 only localhost
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")  # 9
+
+############################################
+# settings for storing files and images
+
+THUMBNAIL_HIGH_RESOLUTION = True    #12
+
+THUMBNAIL_PROCESSORS = (    #12
+        'easy_thumbnails.processors.colorspace',
+        'easy_thumbnails.processors.autocrop',
+        'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+        'easy_thumbnails.processors.filters',
+)
