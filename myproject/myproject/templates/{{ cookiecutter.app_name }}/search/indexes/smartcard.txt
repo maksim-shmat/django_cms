@@ -1,0 +1,4 @@
+{{ '{%' }} include "myproject/search/indexes/product.txt" {{ '%}' }}
+{% raw %}{{ product.description }}
+{{ product.get_card_type_display }} {{ product.storage }}GB
+{% endraw %}

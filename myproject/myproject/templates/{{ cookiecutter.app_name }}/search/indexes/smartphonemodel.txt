@@ -1,0 +1,5 @@
+{{ '{%' }} include "shop2/search/indexes/product.txt" {{ '%}' }}
+{% raw %}{{ product.description }}
+{{ product.operating_system }}{% for variant in product.get_product_variants %}
+{{ variant.storage}}GB{% endfor %}
+{% endraw %}
