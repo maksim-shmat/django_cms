@@ -1,3 +1,4 @@
+""" Docs. """
 import os
 import logging
 from django.apps import AppConfig
@@ -6,6 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class myprojectName(AppConfig):
+    """ docs. """
     name = 'myproject'
     verbose_name = _("My Shop")
     logger = logging.getLogger('myproject')
