@@ -1,3 +1,5 @@
+""" Docs. """
+
 {% if cookiecutter.products_model == 'commodity' -%}
 from shop2.models.defaults.commodity import Commodity
     {%- if cookiecutter.delivery_handling in ['partial', 'common'] %}
