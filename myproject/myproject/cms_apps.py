@@ -1,3 +1,5 @@
+""" Docs. """
+
 from django.conf.urls import url
 from rest_framework.settings import api_settings
 
@@ -10,6 +12,7 @@ from shop.rest.filters import CMSPagesFilterBackend
 
 
 class CatalogListApp(CatalogListCMSApp):
+    """ docs. """
     def get_urls(self, page=None, language=None, **kwargs):
         from shop.search.mixins import ProductSearchViewMixin
         from shop.views.catalog import AddToCartView, ProductListView, ProductRetrieveView

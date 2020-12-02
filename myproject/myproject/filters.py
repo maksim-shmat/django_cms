@@ -1,3 +1,5 @@
+""" Docs. """
+
 from django.forms.widgets import Select
 from django.utils.translation import ugettext_lazy as _
 from django_filters import FilterSet
@@ -11,10 +13,12 @@ from myproject.models import Manufacturer, Product
 
 
 class FilterForm(NgModelFormMixin, Bootstrap3Form):
+    """ docs. """
     scope_prefix = 'filters'
 
 
 class ManufacturerFilterSet(FilterSet):
+    """ docs. """
     manufacturer = ModelChoiceFilter(
         queryset=Manufacturer.objects.all(),
         widget=Select(attrs={'ng-change': 'filterChanged()'}),

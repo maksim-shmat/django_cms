@@ -1,3 +1,5 @@
+""" Docs. """
+
 import os
 from django.conf import settings
 from django.contrib.staticfiles.finders import (FileSystemFinder as FileSystemFinderBase,
@@ -26,6 +28,7 @@ class FileSystemFinder(FileSystemFinderBase):
 
 
 class AppDirectoriesFinder(AppDirectoriesFinderBase):
+    """ docs. """
     serve_unminimized = getattr(settings, 'DEBUG', False)
 
     def find_in_app(self, app, path):
