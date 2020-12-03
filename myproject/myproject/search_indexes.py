@@ -1,3 +1,5 @@
+""" Docs. """
+
 {% if cookiecutter.use_i18n == 'y' -%}
 from django.conf import settings as config
 {% endif %}

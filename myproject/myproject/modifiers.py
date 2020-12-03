@@ -1,3 +1,5 @@
+""" Docs. """
+
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 from shop2.modifiers.pool import cart_modifiers_pool
@@ -57,5 +59,6 @@ class PostalShippingModifier(ShippingModifier):
 
 
 class StripePaymentModifier(modifiers.StripePaymentModifier):
+    """ docs. """
     commision_percentage = 3
 {%- endif %}

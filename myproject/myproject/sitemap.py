@@ -1,3 +1,5 @@
+""" Docs. """
+
 from django.contrib.sitemaps import Sitemap
 from django.conf import settings
 {%- if cookiecutter.products_model == 'commodity' %}
@@ -9,6 +11,7 @@ from myproject.models import Product
 {% endif %}
 
 class ProductSitemap(Sitemap):
+    """ docs. """
     changefreq = 'monthly'
     priority = 0.5
     i18n = settings.USE_I18N

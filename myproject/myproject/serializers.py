@@ -1,3 +1,5 @@
+""" Docs. """
+
 {%- if cookiecutter.products_model != 'polymorphic' %}
 from shop2.serializers.bases import ProductSerializer
 {%- else %}
@@ -9,6 +11,7 @@ from shop2.serializers.defaults.catalog import AddToCartSerializer
 {% if cookiecutter.products_model == 'commodity' -%}
 
 class ProductDetailSerializer(ProductSerializer):
+    """ docs. """
     class Meta(ProductSerializer.Meta):
         fields = ['product_name', 'slug', 'unit_price', 'product_code']
 
@@ -16,6 +19,7 @@ class ProductDetailSerializer(ProductSerializer):
 {% elif cookiecutter.products_model == 'smartcard' -%}
 
 class ProductDetailSerializer(ProductSerializer):
+    """ docs. """
     class Meta(ProductSerializer.Meta):
         fields = ['product_name', 'slug', 'unit_price', 'manufacturer', 'card_type', 'speed',
                   'product_code', 'storage']
